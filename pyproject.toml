@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "Product Recommendation on Cart & Cross Selling"
+version = "0.1.0"
+description = "Recommendation System on Cart"
+authors = ["Vety Bhakti Lestari <vety.lestari@renos.id>"]
+packages = [{ include = "project"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+pandas = "^2.0.0"
+pyarrow = "^14.0.0"
+psycopg2-binary = "^2.9.0"
+xgboost = "^2.0.0"
+scikit-learn = "^1.3.0"
+numpy = "^1.23.0"
+scipy = "^1.9.0"
+python-decouple = "^3.8"
+sqlalchemy = "^2.0.41"
+joblib = "^1.5.1"
+fastapi = "^0.115.13"
+uvicorn = "^0.34.3"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
