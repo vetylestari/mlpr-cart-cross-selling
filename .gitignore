@@ -1,1 +1,15 @@
-.env
+.DS_Store
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.db
+*.sqlite3
+*.log
+*.env
+*.venv
+*.egg-info
+*.dist-info
+*.coverage
+*.mypy_cache

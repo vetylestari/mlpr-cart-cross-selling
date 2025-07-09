@@ -6,6 +6,7 @@ router = APIRouter()
 @router.post("/recommendation/batch-update")
 async def generate_recommendations():
     try:
+        print("🔥 Calling run_batch...")
         run_batch()
         return {"status": "success", "message": "Recommendations updated successfully."}
     except Exception as e:

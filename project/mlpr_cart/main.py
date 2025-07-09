@@ -1,7 +1,13 @@
-from fastapi import FastAPI
-from project.mlpr_cart.route import main as recommendation_route
+from project.mlpr_cart.route.main import (
+    router as mlpr_cart_router,
+)
+from fastapi import APIRouter
 
-app = FastAPI()
+# Initialize the FastAPI application
+router = APIRouter(
+    prefix="/datapi/mlpr-cart",
+    tags=["mlpr-cart"],
+    responses={404: {"description": "Not found"}},
+)
 
-# Register router
-app.include_router(recommendation_route.router)
+router.include_router(mlpr_cart_router)
